@@ -1,18 +1,22 @@
-APP_BASE_URL=https://verification-bot-production-942f.up.railway.app
-SESSION_SECRET=replace_with_a_long_random_secret
-ADMIN_PASSWORD=Rykeen123
-
-DISCORD_BOT_TOKEN=
-DISCORD_CLIENT_ID=
-DISCORD_CLIENT_SECRET=
-DISCORD_GUILD_ID=
-DISCORD_OAUTH_REDIRECT_URI=https://verification-bot-production-942f.up.railway.app/auth/discord/callback
-
-GOOGLE_CLIENT_ID=
-GOOGLE_CLIENT_SECRET=
-GOOGLE_REDIRECT_URI=https://verification-bot-production-942f.up.railway.app/auth/google/callback
-GOOGLE_YOUTUBE_SCOPE=https://www.googleapis.com/auth/youtube.channel-memberships.creator
-
-DATABASE_URL=
-MOCK_YOUTUBE_MEMBERSHIPS=false
-AUDIT_INTERVAL_MINUTES=360
+{
+  "name": "misfit-youtube-role-bot",
+  "version": "2.3.0",
+  "private": true,
+  "description": "Discord + YouTube membership verification bot",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "discord.js": "^14.21.0",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "googleapis": "^154.0.0",
+    "pg": "^8.16.3"
+  }
+}
